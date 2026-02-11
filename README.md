@@ -1,16 +1,16 @@
-# 📷 Automated Image Processing Pipeline
+# Automated Image Processing Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square\&logo=python)
 ![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=flat-square\&logo=opencv)
 ![Pytest](https://img.shields.io/badge/Testing-Pytest-yellow?style=flat-square\&logo=pytest)
 
-## 📌 Project Overview
+## Project Overview
 
 This project is a Python-based image processing automation tool designed to streamline the application of various computer vision techniques. The system monitors an `input/` directory, detects valid image files, and processes them through a pipeline of five distinct filters before saving the results to an `output/` directory.
 
-This application was developed as a school assignment to demonstrate modular Python programming, file system manipulation, image processing using OpenCV, and basic DevOps automation through GitHub Actions.
+This application was developed as a school assignment to demonstrate modular Python programming, file system manipulation, image processing using OpenCV, automated testing using PyTest, and basic DevOps automation through GitHub Actions.
 
-## 🚀 Key Features
+## Key Features
 
 The application automatically applies the following techniques to every image found in the input directory:
 
@@ -20,7 +20,7 @@ The application automatically applies the following techniques to every image fo
 4. **Emboss Filter:** Creates a 3D shadow effect, highlighting high-frequency details.
 5. **Bilateral Filter:** Smoothes images while keeping edges sharp (advanced noise reduction).
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Project/
@@ -35,19 +35,18 @@ Project/
 │   ├── bilateral_filter.py
 │   └── combine_filters.py
 ├── process_image.py        # Main execution script
-├── test_process_image.py   # Unit/Integration tests (Mocked)
-├── test_e2e_process.py     # End-to-End system tests (Generated data)
-├── test_real_data.py       # Real data smoke tests (Actual input files)
+├── test_script.py          # Ensures automation works properly
 ├── requirements.txt        # Project dependencies
 └── README.md               # Project documentation
 ```
 
-## 🛠️ Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 
 * **Python 3.10+** (Recommended)
 * **pip** (Python package manager)
+* **Git**
 
 ### Installation Steps
 
@@ -55,7 +54,7 @@ Project/
 
 ```bash
 git clone <repository_url>
-cd elective4-mt
+cd automated-image-processing
 ```
 
 2. **Install Dependencies**
@@ -70,65 +69,58 @@ or
 python -m pip install -r requirements.txt
 ```
 
-## 💻 Usage
+## Usage
 
 1. **Add Images:**
    Place your raw images (`.jpg`, `.png`, `.jpeg`, `.bmp`, or `.tiff`) inside the `input/` folder.
 
-2. **Run the Script Locally:**
+2. **Push Changes to Trigger the CI Pipeline:**
 
 ```bash
-python process_image.py
+git add .
+git commit -m "your-image-name-here"
+git push origin main
 ```
 
 3. **View Results:**
    Processed images will appear inside the `output/` folder (e.g., `image_canny.jpg`, `image_median_blur.jpg`, etc.).
 
-## ⚡ Run All Tests
-
-To execute the complete test suite:
-
-```bash
-python -m pytest -v
-```
-
-## 🔄 Automation
+## Automation
 
 This repository includes a GitHub Actions workflow that automatically runs the project whenever changes are pushed to the `main` branch.
 
 The workflow:
 
 1. Installs required dependencies
-2. Runs the image processing script
-3. Saves generated output files
-4. Commits updates if changes are detected
+2. Runs the test script
+3. Runs the image processing script
+4. Saves generated output files
+5. Commits updates if changes are detected
 
 Workflow file location:
 
 ```text
-.github/workflows/pipeline.yml
+.github/workflows/ci.yml
 ```
 
-## 💭 DevOps Concepts Applied
+## DevOps Concepts Applied
 
-1. Version Control
-2. GitHub Repository Hosting
-3. Continuous Integration
-4. Automated Testing
-5. Virtual Environment
+* **Version Control**
+* **GitHub Repository Hosting**
+* **Continuous Integration**
+* **Automated Testing**
+* **Virtual Environment**
+* **Deterministic and Reproducible Image Processing Pipeline**
 
-## ⚠️ Academic Integrity
+## Academic Integrity
 
 This project was developed as a school assignment.
 
 For Students: Please use this code for reference and learning purposes only. Do not copy the code directly to submit as your own work.
 
-## 📝 Authors
+## Authors
 
-### Asuncion, Andrei T. - Developer
-
-### De Leon, John Eron R. - DevOps
-
-### Apolonio, Lanz Matthew B. - Automated QA Tester
-
-### Ponelas, Joshua Efraim O. - Presenter
+- **Asuncion, Andrei T.** – Developer 
+- **De Leon, John Eron R.** – DevOps  
+- **Apolonio, Lanz Matthew B.** – Automated QA Tester  
+- **Ponelas, Joshua Efraim O.** – Presenter
