@@ -84,31 +84,6 @@ python process_image.py
 3. **View Results:**
    Processed images will appear inside the `output/` folder (e.g., `image_canny.jpg`, `image_median_blur.jpg`, etc.).
 
-## 🧪 Testing Documentation
-
-This project includes a testing suite using Pytest to validate logic, system behavior, and real-world data handling.
-
-1. **Integration Tests (Mocked)**
-   File: `test_process_image.py`
-   Purpose: Verifies application logic (file detection and filter execution).
-   Run Command:
-
-```bash
-python -m pytest test_process_image.py -v
-```
-
-2. **End-to-End System Tests**
-   File: `test_e2e_process.py`
-
-3. **Real Data Smoke Tests**
-   File: `test_real_data.py`
-   Purpose: Validates the application using actual image files from the `input/` directory.
-   Run Command:
-
-```bash
-python -m pytest test_real_data.py -s -v
-```
-
 ## ⚡ Run All Tests
 
 To execute the complete test suite:
@@ -134,7 +109,13 @@ Workflow file location:
 .github/workflows/pipeline.yml
 ```
 
-No manual action is required for generated outputs.
+## 💭 DevOps Concepts Applied
+
+1. Version Control
+2. GitHub Repository Hosting
+3. Continuous Integration
+4. Automated Testing
+5. Virtual Environment
 
 ## ⚠️ Academic Integrity
 
