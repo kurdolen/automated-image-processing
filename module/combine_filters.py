@@ -42,7 +42,6 @@ def apply_four_filters(image_path, output_folder=None):
     filtered_image = cv2.bilateralFilter(filtered_image, 9, 75, 75) #Bilateral filter (diameter=9, sigmaColor=75, sigmaSpace=75)
     filtered_image = cv2.cvtColor(filtered_image, cv2.COLOR_BGR2GRAY) #Grayscale conversion
     
-
     # Save the combined result
     filename = Path(image_path).stem
     file_ext = Path(image_path).suffix
