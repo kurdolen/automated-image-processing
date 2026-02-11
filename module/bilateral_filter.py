@@ -49,3 +49,5 @@ def apply_bilateral_filter(image_path, diameter=9, sigma_color=75, sigma_space=7
     except Exception as e:
         print(f"Error: {str(e)}")
         return False
+    
+    
