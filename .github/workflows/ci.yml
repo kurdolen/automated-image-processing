@@ -8,6 +8,7 @@ on:
     paths:
       - "input/**"
       - "module/**"
+      - "test_script.py"
       - "process_image.py"
       - "requirements.txt"
       - ".github/workflows/**"
